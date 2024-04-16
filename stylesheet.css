@@ -1,128 +1,137 @@
+@charset "UTF-8";
+
 * {
     box-sizing: border-box;
 }
-
+html {
+  font-size: 100%;
+}
 body {
+  color: black;
+  font-family: "Yu Mincho";
+  margin: 0 auto;
+}
+a {
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style: none;
+}
+.site-title a {
+  color: black;
+}
+.section-title {
+  display: inline-block;
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 60px;
+  border-bottom: solid 1px black;
+}
+.content-title {
+  margin: 10px 0;
+  font-size: 130%;
+}
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto 100px auto;
+  padding: 0 4%;
+  text-align: center;
+}
+
+/*-------------------------------------------
+ヘッダー
+-------------------------------------------*/
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin: 0 auto;
-    font-family: "Yu Mincho";
+    height: 80px;
 }
-
-header {
-    background-color: #000;
-    color: #fff;
-    height: 90px;
-}
-
-.header-logo {
-    font-size: 36px;
-    font-weight: bold;
-    line-height: 90px;
-    float: left;
-    margin-left: 20px;
-}
-
-.header-right {
+#header .fa-twitter {
     font-size: 40px;
-    line-height: 90px;
-    float: right;
-}
-
-.header-right a {
-    margin-right: 20px;
-}
-
-.fa-twitter {
-    color: #fff;
-}
-
-.fa-twitter:hover {
     color: #55acee;
 }
 
-.top-image {
-    width: 100%;
-    margin-bottom: 30px;
-}
-
-.top-wrapper {
-    text-align: center;
-    margin-bottom: 100px;
-}
-
-.top-wrapper h1 {
-    font-size: 70px;
-}
-
-.top-wrapper h2 {
-    font-size: 40px;
-}
-
-.top-wrapper p {
-    font-size: 20px;
-}
-
-.team-wrapper {
-    width: 100%;
+/*-------------------------------------------
+Mainvisual
+-------------------------------------------*/
+#mainvisual {
     margin-bottom: 80px;
 }
-
-.team-wrapper h2 {
-    text-align: left;
-    margin: 0 2.5% 60px 2.5%;
-    font-size: 40px;
-    border-bottom: 2px solid #dadada;
-}
-
-.team {
-    float: left;
-    text-align: center;
-    width: 50%;
-}
-
-.clear {
-    clear: left;
-}
-
-.team img {
-    width: 90%;
-}
-
-.team h3 {
-    font-size: 24px;
-}
-
-.caster-wrapper {
-    margin-bottom: 80px;
-}
-
-.caster-wrapper h2 {
-    text-align: left;
-    margin: 0 2.5% 60px 2.5%;
-    font-size: 40px;
-    border-bottom: 2px solid #dadada;
-}
-
-.caster {
-    text-align: center;
+#mainvisual img {
     width: 100%;
+    max-width: 1920px;
+    height: 600px;
+    object-fit: cover;
 }
 
-.caster img {
-    width: 45%;
+/*-------------------------------------------
+Statement
+-------------------------------------------*/
+#statement {
+    font-size: 140%;
 }
 
-.caster h3 {
-    font-size: 24px;
+/*-------------------------------------------
+Teams
+-------------------------------------------*/
+#teams ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0;
+    margin: 0 0;
+}
+#teams li {
+    width: 49%;
+}
+#teams p {
+    font-weight: bold;
 }
 
-footer {
-    background-color: #000;
-    color: #fff;
-    height: 60px;
-    text-align: center;
+/*-------------------------------------------
+Casters
+-------------------------------------------*/
+#casters {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#casters .content {
+    width: 49%;
 }
 
-.footer-logo {
-    height: 50px;
-    padding-top: 5px;
-}
+/*-------------------------------------------
+SP
+-------------------------------------------*/
+@media screen and (max-width: 600px) {
+
+    /*-------------------------------------------
+    Mainvisual
+    -------------------------------------------*/
+    #mainvisual img {
+      height: calc(100vh - 80px);
+    }
+
+    /*-------------------------------------------
+    Teams
+    -------------------------------------------*/
+    #teams ul {
+      flex-direction: column;
+    }
+    #teams li {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    /*-------------------------------------------
+    Casters
+    -------------------------------------------*/
+    #casters .content {
+        width: 100%;
+    }    
+  }
