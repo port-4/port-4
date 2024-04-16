@@ -110,6 +110,12 @@ SP
 -------------------------------------------*/
 @media screen and (max-width: 600px) {
 
+  .site-title a {
+    font-size: 1.7rem;
+  }
+  .section-title {
+    font-size: 1.7rem;
+  }
   /*-------------------------------------------
   Mainvisual
   -------------------------------------------*/
@@ -132,6 +138,9 @@ SP
   #teams li {
     width: 100%;
     margin-bottom: 30px;
+  }
+  #teams p {
+    font-weight: normal;
   }
 
   /*-------------------------------------------
