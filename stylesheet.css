@@ -1,44 +1,38 @@
-@charset "UTF-8";
-
-* {
-    box-sizing: border-box;
-}
 html {
-  font-size: 100%;
+    font-size: 100%;
 }
 body {
-  color: black;
-  font-family: "Yu Mincho";
-  margin: 0 auto;
+    margin: 0 auto;
+    font-size: 1rem;
 }
 a {
-  text-decoration: none;
-}
-img {
-  max-width: 100%;
+    text-decoration: none;
 }
 li {
-  list-style: none;
+    list-style: none;
 }
-.site-title a {
-  color: black;
-}
-.section-title {
-  display: inline-block;
-  font-size: 2rem;
-  text-align: center;
-  margin-bottom: 60px;
-  border-bottom: solid 1px black;
-}
-.content-title {
-  margin: 10px 0;
-  font-size: 130%;
+img {
+    max-width: 100%;
 }
 .wrapper {
-  max-width: 960px;
-  margin: 0 auto 100px auto;
-  padding: 0 4%;
-  text-align: center;
+    max-width: 960px;
+    margin: 0 auto 100px auto;
+    padding: 0 4%;
+    text-align: center;
+}
+.site-title a {
+    display: block;
+}
+.section-title {
+    display: inline-block;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 60px;
+    border-bottom: solid 1px #383e45;
+}
+.content-title {
+    font-size: 1rem;
+    margin: 10px 0;
 }
 
 /*-------------------------------------------
@@ -51,9 +45,11 @@ li {
     margin: 0 auto;
     height: 80px;
 }
-#header .fa-twitter {
-    font-size: 40px;
-    color: #55acee;
+#header a {
+    color: black;
+}
+#header .link:hover {
+    color: blue;
 }
 
 /*-------------------------------------------
@@ -70,42 +66,40 @@ Mainvisual
 }
 
 /*-------------------------------------------
-Statement
+Profile
 -------------------------------------------*/
-#statement {
-  font-size: 140%;
-}
-#statement .fa-twitch {
-  margin-right: 10px;
-}
-
-/*-------------------------------------------
-Teams
--------------------------------------------*/
-#teams ul {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0;
-    margin: 0 0;
-}
-#teams li {
-    width: 49%;
-}
-#teams p {
-    font-weight: bold;
-}
-
-/*-------------------------------------------
-Casters
--------------------------------------------*/
-#casters {
+#about .content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-#casters .content {
-    width: 49%;
+#about img {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/*-------------------------------------------
+Works
+-------------------------------------------*/
+#works .content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#works img {
+    width: 32%;
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+#footer {
+    font-size: 0.5rem;
+    padding: 10px 0;
+    text-align: center;
 }
 
 /*-------------------------------------------
@@ -113,49 +107,21 @@ SP
 -------------------------------------------*/
 @media screen and (max-width: 600px) {
 
-  .site-title a {
-    font-size: 1.7rem;
-  }
-  .section-title {
-    font-size: 1.7rem;
-  }
-  /*-------------------------------------------
-  Mainvisual
-  -------------------------------------------*/
-  #mainvisual img {
-    height: calc(100vh - 80px);
-  }
-  /*-------------------------------------------
-  Statement
-  -------------------------------------------*/
-  #statement {
-    font-size: 100%;
-  }
-  #statement h2 {
-    font-size: 1.3rem;
-  }
+    /*-------------------------------------------
+    Mainvisual
+    -------------------------------------------*/
+    #mainvisual img {
+        height: calc(100vh - 80px);
+    }
 
-  /*-------------------------------------------
-  Teams
-  -------------------------------------------*/
-  #teams ul {
-    flex-direction: column;
-  }
-  #teams li {
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  #teams p {
-    font-weight: normal;
-  }
-
-  /*-------------------------------------------
-  Casters
-  -------------------------------------------*/
-  #casters .content {
-    width: 100%;
-  }
-  #casters .section-title{
-    margin-top: 0;
-  }
+    /*-------------------------------------------
+    Works
+    -------------------------------------------*/
+    #works .content {
+        flex-direction: column;
+    }
+    #works img {
+        width: 100%;
+        margin-bottom: 30px;
+    }
 }
