@@ -2,126 +2,87 @@ html {
     font-size: 100%;
 }
 body {
-    margin: 0 auto;
+    color: black;
     font-size: 1rem;
-}
-a {
-    text-decoration: none;
-}
-li {
-    list-style: none;
-}
-img {
-    max-width: 100%;
+    margin: 0 auto;
 }
 .wrapper {
-    max-width: 960px;
+    max-width: 900px;
     margin: 0 auto 100px auto;
+    text-align: center;
     padding: 0 4%;
-    text-align: center;
 }
-.site-title a {
-    display: block;
+.img {
+    max-width: 100%;
 }
-.section-title {
-    display: inline-block;
-    font-size: 2rem;
-    text-align: center;
-    margin-bottom: 60px;
-    border-bottom: solid 1px #383e45;
-}
-.content-title {
-    font-size: 1rem;
-    margin: 10px 0;
+.btn:hover {
+    opacity: 0.8;
 }
 
-/*-------------------------------------------
-ヘッダー
--------------------------------------------*/
 #header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 auto;
     height: 80px;
+    margin: 0 auto;
+    padding: 0 10px;
 }
-#header a {
-    color: black;
-}
-#header .link:hover {
-    color: blue;
+#header .fa-twitter {
+    font-size: 2.2rem;
+    color: #55acee;
 }
 
-/*-------------------------------------------
-Mainvisual
--------------------------------------------*/
-#mainvisual {
-    margin-bottom: 80px;
-}
+
 #mainvisual img {
     width: 100%;
-    max-width: 1920px;
     height: 600px;
     object-fit: cover;
+    margin-bottom: 80px;
 }
 
-/*-------------------------------------------
-Profile
--------------------------------------------*/
-#about .content {
+
+#statement {
+    font-size: 1.5rem;
+}
+
+
+#teams h2 {
+    font-size: 2rem;
+    border-bottom: 1px solid black;
+    display: inline-block;
+    margin-bottom: 50px;
+}
+#teams h3 {
+    font-size: 1.2rem;
+}
+#teams .contents {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
-#about img {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    object-fit: cover;
+#teams img {
+    width: 95%;
 }
 
-/*-------------------------------------------
-Works
--------------------------------------------*/
-#works .content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-#works img {
-    width: 32%;
-}
 
-/*-------------------------------------------
-footer
--------------------------------------------*/
 #footer {
-    font-size: 0.5rem;
-    padding: 10px 0;
     text-align: center;
+    font-size: 0.7rem;
 }
 
-/*-------------------------------------------
-SP
--------------------------------------------*/
-@media screen and (max-width: 600px) {
 
-    /*-------------------------------------------
-    Mainvisual
-    -------------------------------------------*/
+@media (max-width: 1000px) {
+    
     #mainvisual img {
         height: calc(100vh - 80px);
     }
 
-    /*-------------------------------------------
-    Works
-    -------------------------------------------*/
-    #works .content {
+    #teams .contents {
+        display: flex;
         flex-direction: column;
     }
-    #works img {
-        width: 100%;
+    #teams .content {
         margin-bottom: 30px;
+    }
+    #teams img {
+        width: 80%;
     }
 }
