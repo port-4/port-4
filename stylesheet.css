@@ -23,8 +23,10 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 60px;
     margin: 0 auto;
+    position: fixed;
+    z-index: 10;
 }
 #header .fa-twitter {
     font-size: 2.2rem;
@@ -83,7 +85,7 @@ body {
     }
 
     #mainvisual img {
-        height: calc(100vh - 80px);
+        height: calc(100vh - 60px);
     }
 
     #statement {
