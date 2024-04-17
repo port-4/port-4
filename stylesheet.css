@@ -25,7 +25,6 @@ body {
     align-items: center;
     height: 80px;
     margin: 0 auto;
-    padding: 0 10px;
 }
 #header .fa-twitter {
     font-size: 2.2rem;
@@ -43,6 +42,7 @@ body {
 
 
 #statement {
+    max-width: 100%;
     font-size: 1.5rem;
 }
 
@@ -72,6 +72,13 @@ body {
 
 @media (max-width: 1000px) {
     
+    #header h1 {
+        font-size: 1.5rem;
+    }
+    #header .fa-twitter {
+        font-size: 2rem;
+    }
+
     #mainvisual img {
         height: calc(100vh - 80px);
     }
